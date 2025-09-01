@@ -1,6 +1,5 @@
 # Ruby-bot
-discordrbを使って作成したシンプルなDiscordBOTです。　　
-特定のメッセージに反応して挨拶を返すだけのもの。
+discordrbを使って作成したシンプルなDiscordBOTです　　
 
 # 必要条件
 - Ruby 3.x
