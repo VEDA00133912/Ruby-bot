@@ -5,7 +5,7 @@ Dir[File.join(__dir__, 'commands', '*.rb')].each do |file|
   require file
 end
 
-intents = [:servers, :server_messages]
+intents = [:servers, :server_messages, :server_members]
 bot = Discordrb::Bot.new(
   token: ENV['DISCORD_BOT_TOKEN'],
   intents: intents
