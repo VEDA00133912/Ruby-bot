@@ -24,8 +24,14 @@ bot.ready do |_event|
     mod = Commands.const_get(const)
     next unless mod.respond_to?(:register)
 
-    mod.register(bot)
-    puts "Registered command module: #{const}"
+    begin
+      mod.register(bot)
+      puts "Registered command module: #{const}"
+    rescue => e
+      puts "Failed to register #{const}: #{e.message}"
+    end
+
+    sleep 1.5
   end
 end
 
