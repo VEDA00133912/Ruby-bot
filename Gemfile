@@ -5,3 +5,5 @@ gem "discordrb", "~> 3.5"
 gem "dotenv", "~> 3.1"
 
 gem "puma", "~> 6.6"
+
+gem "rackup", "~> 2.2"
