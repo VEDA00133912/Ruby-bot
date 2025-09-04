@@ -12,10 +12,13 @@ $bot = Discordrb::Bot.new(
 )
 
 $bot.message(content: 'hello') do |event|
+  event.channel.start_typing   # ◯◯が入力中...を表示するやつ
   member = event.server.member(event.user.id)
   display_name = member.display_name
+  sleep 2
   event.respond "Hello, #{display_name}!!"
 end
+
 
 $bot.ready do |_event|
   puts "Ready! Logged in as #{$bot.profile.username}##{$bot.profile.discriminator}"
