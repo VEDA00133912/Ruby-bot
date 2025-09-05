@@ -70,5 +70,23 @@
   {
     "name": "shutdown",
     "description": "Shutdown the bot"
+  },
+  {
+    "name": "gosenchoyen",
+    "description": "Generate a 5000 trillion yen meme image",
+    "options": [
+      {
+        "name": "top",
+        "description": "Text to display at the top",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "bottom",
+        "description": "Text to display at the bottom",
+        "type": 3,
+        "required": true
+      }
+    ]
   }
 ]
