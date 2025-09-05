@@ -1,9 +1,6 @@
 module Commands
   module Shutdown
     def self.register(bot)
-      bot.register_application_command(:shutdown, 'Shutdown the bot') do |_cmd|
-      end
-
       bot.application_command(:shutdown) do |event|
         owner_id = ENV['BOT_OWNER_ID']
 

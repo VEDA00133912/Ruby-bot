@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ping",
+    "description": "ping!"
+  },
+  {
+    "name": "hello",
+    "description": "hello!"
+  },
+  {
+    "name": "avatar",
+    "description": "Show the avatar of a user",
+    "options": [
+      {
+        "name": "user",
+        "description": "The user whose avatar to display",
+        "type": 6,
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "delete",
+    "description": "Delete messages from a specified channel",
+    "options": [
+      {
+        "name": "amount",
+        "description": "Number of messages to delete (1-100)",
+        "type": 4,
+        "required": true
+      },
+      {
+        "name": "channel",
+        "description": "Target channel to delete messages from",
+        "type": 7,
+        "required": false
+      },
+      {
+        "name": "user",
+        "description": "Delete only messages from a specific user",
+        "type": 6,
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "info",
+    "description": "Get information",
+    "options": [
+      {
+        "name": "user",
+        "description": "Get information about a user",
+        "type": 1,
+        "options": [
+          {
+            "name": "user",
+            "description": "The user to get info for",
+            "type": 6,
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "server",
+        "description": "Get information about the server",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "name": "shutdown",
+    "description": "Shutdown the bot"
+  }
+]

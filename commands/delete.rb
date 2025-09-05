@@ -1,12 +1,6 @@
 module Commands
   module Delete
     def self.register(bot)
-      bot.register_application_command(:delete, 'Delete messages from a specified channel') do |cmd|
-        cmd.integer('amount', 'Number of messages to delete (1-100)', required: true)
-        cmd.channel('channel', 'Target channel to delete messages from', required: false)
-        cmd.user('user', 'Delete only messages from a specific user', required: false)
-      end
-
       bot.application_command(:delete) do |event|
         begin
           event.defer
@@ -61,9 +55,7 @@ module Commands
           end
 
           msg = "Deleted #{deleted_count} messages from #{channel.mention}."
-          if deleted_count < to_delete.size
-            msg << " Some messages could not be deleted (probably older than 14 days)."
-          end
+          msg << " Some messages could not be deleted (probably older than 14 days)." if deleted_count < to_delete.size
           event.send_message(content: msg, ephemeral: true)
 
         rescue => e
